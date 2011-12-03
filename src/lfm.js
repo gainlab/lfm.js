@@ -158,6 +158,9 @@ var LFM = (function () {
     },
     post: function (method, params, callback) {
       api(method, 'POST', params, callback);
+    },
+    scrobble: function (params, callback) {
+      api('track.updateNowPlaying', 'POST', params, callback);
     }
   };
 }());
